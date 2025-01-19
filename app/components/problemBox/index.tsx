@@ -88,7 +88,11 @@ export const ProblemBox = () => {
             {isRunning ? timeElapsed : ""}
           </span>
           <div className="w-full min-w-[25rem] max-w-[50rem] flex flex-col items-center justify-center max-md:text-4xl md:text-6xl text-green-500 font-bold p-10 border border-gray-100 dark:border-gray-800">
-            <div>{`${problemSet?.[problemIndex].problem}`}</div>
+            {problemSet?.[problemIndex].problem ? (
+              <div>{problemSet[problemIndex].problem}</div>
+            ) : (
+              <div>Loading...</div>
+            )}
           </div>
 
           <div>
