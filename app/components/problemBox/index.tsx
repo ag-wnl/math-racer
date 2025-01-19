@@ -70,7 +70,7 @@ export const ProblemBox = () => {
     <section className="flex flex-col items-center justify-center gap-10">
       {timeElapsed === parseInt(maxTime) ? (
         <>
-          <div className="w-[50rem] flex flex-col items-center justify-center text-3xl font-bold p-10 border border-gray-100 dark:border-gray-800">
+          <div className="w-full min-w-[25rem] max-w-[50rem] flex flex-col items-center justify-center max-md:text-xl md:text-3xl font-bold p-10 border border-gray-100 dark:border-gray-800">
             <div className="flex flex-col gap-2 items-start">
               <span className="text-red-400">total problems: {totalProbs}</span>
               <span className="text-green-400">
@@ -87,7 +87,7 @@ export const ProblemBox = () => {
           <span className="text-green-500 h-[1rem]">
             {isRunning ? timeElapsed : ""}
           </span>
-          <div className="w-[50rem] flex flex-col items-center justify-center text-6xl text-green-500 font-bold p-10 border border-gray-100 dark:border-gray-800">
+          <div className="w-full min-w-[25rem] max-w-[50rem] flex flex-col items-center justify-center max-md:text-4xl md:text-6xl text-green-500 font-bold p-10 border border-gray-100 dark:border-gray-800">
             <div>{`${problemSet?.[problemIndex].problem}`}</div>
           </div>
 
